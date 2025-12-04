@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 2543cf3 (V2(repaired tests))
 import org.junit.jupiter.api.Test;
 
 import main.*;
