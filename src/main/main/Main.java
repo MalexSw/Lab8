@@ -1,6 +1,8 @@
 package main;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -88,7 +90,7 @@ public class Main {
         Library library = new Library();
         int id = 1;
         try {
-            BufferedReader br = new BufferedReader(new FileReader("testExamples/books.csv"));
+            BufferedReader br = Files.newBufferedReader(Paths.get("Lab8", "testExamples", "books.csv"));
             String line = br.readLine();
             while ((line = br.readLine()) != null) {
                 String[] parts = line.split(";");
@@ -102,7 +104,7 @@ public class Main {
             }
             br.close();
 
-            br = new BufferedReader(new FileReader("testExamples/jlist.csv"));
+            br = Files.newBufferedReader(Paths.get("Lab8", "testExamples", "jlist.csv"));
             line = br.readLine();
             while ((line = br.readLine()) != null) {
                 String[] parts = line.split("\t");
@@ -117,7 +119,7 @@ public class Main {
             }
             br.close();
 
-            br = new BufferedReader(new FileReader("testExamples/movies.csv"));
+            br = Files.newBufferedReader(Paths.get("Lab8", "testExamples", "movies.csv"));
             line = br.readLine();
             while ((line = br.readLine()) != null) {
                 String[] parts = line.split(";");
