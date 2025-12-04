@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 2543cf3 (V2(repaired tests))
 import org.junit.jupiter.api.Test;
 
 import main.*;
@@ -20,7 +25,12 @@ class LibraryTest {
 
     @Test
     void journalLoanLimits() {
+<<<<<<< HEAD
         Journal journal = new Journal(2, "Journal of Testing", "1234-5678", "Field Press", "Vol. 1", "http://journal.example");
+=======
+        Journal journal = new Journal(2, "Journal of Testing", "1234-5678", "Field Press", "Vol. 1",
+                "http://journal.example");
+>>>>>>> 2543cf3 (V2(repaired tests))
         assertEquals(-1, journal.daysOverdue(2, false));
         assertFalse(journal.isOverdue(2, false));
         assertEquals(2, journal.daysOverdue(9, true));

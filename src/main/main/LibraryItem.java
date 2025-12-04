@@ -8,7 +8,8 @@ public abstract class LibraryItem {
     private final int loanDaysFaculty;
     private boolean onLoan;
 
-    protected LibraryItem(int libraryId, String title, double overdueFeePerDay, int loanDaysStudent, int loanDaysFaculty) {
+    protected LibraryItem(int libraryId, String title, double overdueFeePerDay, int loanDaysStudent,
+            int loanDaysFaculty) {
         this.libraryId = libraryId;
         this.title = title;
         this.overdueFeePerDay = overdueFeePerDay;

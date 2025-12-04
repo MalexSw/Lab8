@@ -7,7 +7,8 @@ public class Film extends LibraryItem {
     private final int runtimeMinutes;
     private final String rating;
 
-    public Film(int libraryId, String title, String genre, String director, int year, int runtimeMinutes, String rating) {
+    public Film(int libraryId, String title, String genre, String director, int year, int runtimeMinutes,
+            String rating) {
         super(libraryId, title, 5.0, 2, 2);
         this.genre = genre;
         this.director = director;

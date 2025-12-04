@@ -60,12 +60,15 @@ public class Main {
             }
         }
 
-        System.out.printf("Simulated %d days for %d users and %d items.%n", DAYS_TO_SIMULATE, users.size(), library.getCatalog().size());
+        System.out.printf("Simulated %d days for %d users and %d items.%n", DAYS_TO_SIMULATE, users.size(),
+                library.getCatalog().size());
         System.out.printf("Borrow attempts: %d, successful loans: %d%n", stats.borrowAttempts, stats.successfulBorrows);
-        System.out.printf("Returns: %d (%d overdue) with total fines $%.2f.%n", stats.returns, stats.overdueReturns, stats.totalFine);
+        System.out.printf("Returns: %d (%d overdue) with total fines $%.2f.%n", stats.returns, stats.overdueReturns,
+                stats.totalFine);
     }
 
-    private static boolean attemptBorrow(Library library, User user, ItemType type, double probability, int day, Random random) {
+    private static boolean attemptBorrow(Library library, User user, ItemType type, double probability, int day,
+            Random random) {
         if (random.nextDouble() >= probability) {
             return false;
         }
@@ -86,7 +89,7 @@ public class Main {
         int id = 1;
         try {
             BufferedReader br = new BufferedReader(new FileReader("testExamples/books.csv"));
-            String line = br.readLine(); 
+            String line = br.readLine();
             while ((line = br.readLine()) != null) {
                 String[] parts = line.split(";");
                 if (parts.length >= 5) {
@@ -100,7 +103,7 @@ public class Main {
             br.close();
 
             br = new BufferedReader(new FileReader("testExamples/jlist.csv"));
-            line = br.readLine(); 
+            line = br.readLine();
             while ((line = br.readLine()) != null) {
                 String[] parts = line.split("\t");
                 if (parts.length >= 13) {
@@ -114,9 +117,8 @@ public class Main {
             }
             br.close();
 
-            
             br = new BufferedReader(new FileReader("testExamples/movies.csv"));
-            line = br.readLine(); 
+            line = br.readLine();
             while ((line = br.readLine()) != null) {
                 String[] parts = line.split(";");
                 if (parts.length >= 9) {
